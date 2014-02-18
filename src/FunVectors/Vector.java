@@ -23,12 +23,6 @@ public class Vector {
         this.y3 = y3;
     }
 
-    @Override
-    public String toString() {
-
-        return String.valueOf(x1 != 0 && x2 != 0 && x3 != 0 ? " Координаты начала: (" + x1 + ";" + x2 + ";" + x3 + ")\r\n  Координаты конца:" : "") + "   (" + y1 + ";" + y2 + ";" + y3 + ")";
-    }
-
     public Vector Сложить(Vector Z) {
         return new Vector(y1 - x1 + Z.y1 - Z.x1, y2 + Z.y2 - x2 - Z.x2, y3 + Z.y3 - x3 - Z.x3);
     }
@@ -37,8 +31,8 @@ public class Vector {
         return new Vector(y1 - x1 - Z.y1 + Z.x1, y2 - Z.y2 - x2 + Z.x2, y3 - Z.y3 - x3 + Z.x3);
     }
 
-    public Vector Модуль() {
-        return new Vector();
+    public double Модуль(Vector Z) {
+        return Math.pow(Z.y1*Z.y1+Z.y2*Z.y2+Z.y3*Z.y3,0.5);
     }
 
     public Vector ПереносВНачало() {  //  тернарный оператор не работает
@@ -49,10 +43,10 @@ public class Vector {
         }
     }
 
-    public Vector Перенос(int a, int b, int c) {
+    @Override
+    public String toString() {
 
-        return new Vector(this.x1 + a, this.x2 + b, this.x3 + c, this.y1 + a, this.y2 + b, this.y3 + c);
-
+        return String.valueOf(x1 != 0 && x2 != 0 && x3 != 0 ? " Координаты начала: (" + x1 + ";" + x2 + ";" + x3 + ")\r\n  Координаты конца:" : "") + "   (" + y1 + ";" + y2 + ";" + y3 + ")";
     }
 
 }

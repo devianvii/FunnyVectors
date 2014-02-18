@@ -8,6 +8,7 @@ public class WorkingClass {
         System.out.println("Имеем вектора:\r\nВектор 1:\r\n" +c1 +"\r\nВектор 2:\r\n "+c2);
         System.out.println("\r\nСложим вектора 1 и 2\r\nПолучим вектор:"+c1.Сложить(c2));
         System.out.println("\r\nСложим вектора 1 и 2\r\nПолучим вектор:"+c1.Вычесть(c2));
+         System.out.println( Модуль (c1));
 
     }
 
