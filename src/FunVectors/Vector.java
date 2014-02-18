@@ -13,7 +13,7 @@ public class Vector {
         this.y2 = y2;
         this.y3 = y3;
 
-        }
+    }
 
     public Vector(int y1, int y2, int y3) {
         this.x1 = 0;
@@ -25,31 +25,31 @@ public class Vector {
     }
 
     public Vector Сложить(Vector Z) {
-        Z=Z.ПереносВНачало();
+        Z = Z.ПереносВНачало();
         this.ПереносВНачало(); // ???????
-        return new Vector(y1 + Z.y1 , y2 + Z.y2 , y3 + Z.y3);
+        return new Vector(y1 + Z.y1, y2 + Z.y2, y3 + Z.y3);
     }
 
     public Vector Вычесть(Vector Z) {
-        Z=Z.ПереносВНачало();
+        Z = Z.ПереносВНачало();
         this.ПереносВНачало(); // ???????
-        return new Vector(y1-Z.y1 , y2 - Z.y2, y3 - Z.y3);
+        return new Vector(y1 - Z.y1, y2 - Z.y2, y3 - Z.y3);
     }
 
     public double Модуль() {
-        return Math.pow(this.y1*this.y1+this.y2*this.y2+this.y3*this.y3,0.5);
+        return Math.pow(this.y1 * this.y1 + this.y2 * this.y2 + this.y3 * this.y3, 0.5);
     }
-    
-    public double СкалярноеПроизведение(Vector Z){
-        Z=Z.ПереносВНачало();
+
+    public double СкалярноеПроизведение(Vector Z) {
+        Z = Z.ПереносВНачало();
         this.ПереносВНачало(); // ???????
-        return this.y1*Z.y1+this.y2*Z.y2+this.y3*Z.y3;
+        return this.y1 * Z.y1 + this.y2 * Z.y2 + this.y3 * Z.y3;
     }
-    
-    public Vector ВекторноеПроизведение(Vector Z){
-        Z=Z.ПереносВНачало();
+
+    public Vector ВекторноеПроизведение(Vector Z) {
+        Z = Z.ПереносВНачало();
         this.ПереносВНачало(); // ???????
-        return new Vector(this.y2*Z.y3-this.y3*Z.y2,this.y1*Z.y3-this.y3*Z.y1,this.y1*Z.y2-this.y2*Z.y1);
+        return new Vector(this.y2 * Z.y3 - this.y3 * Z.y2, this.y1 * Z.y3 - this.y3 * Z.y1, this.y1 * Z.y2 - this.y2 * Z.y1);
     }
 
     private Vector ПереносВНачало() {  //  тернарный оператор не работает
