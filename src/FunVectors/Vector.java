@@ -37,6 +37,7 @@ public class Vector {
     }
 
     public double Модуль() {
+        this.ПереносВНачало(); // ???????
         return Math.pow(this.y1 * this.y1 + this.y2 * this.y2 + this.y3 * this.y3, 0.5);
     }
 
