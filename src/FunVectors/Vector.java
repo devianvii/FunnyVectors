@@ -17,7 +17,7 @@ public class Vector {
         return new Vector(a + other.a, b + other.b, c + other.c);
     }
 
-    public Vector subtract(Vector other) {
+    public Vector Subtract(Vector other) {
 
         return new Vector(a - other.a, b - other.b, c - other.c);
     }
@@ -25,13 +25,17 @@ public class Vector {
     public double Module() {
         return Math.pow(a * a + b * b + c * c, 0.5);
     }
+    
+     public Vector multiply(int g) {
+        return new Vector(a * g, b * g, c * g); //Умножение вектора на число
+    }
 
-    public double СкалярноеПроизведение(Vector other) {
+    public double MultiplyScalar(Vector other) {
 
         return this.a * other.a + this.b * other.b + this.c * other.c;
     }
 
-    public Vector ВекторноеПроизведение(Vector other) {
+    public Vector MultiplyVector(Vector other) {
 
         return new Vector(this.b * other.c - this.c * other.b, this.a * other.c - this.c * other.a, this.a * other.b - this.b * other.a);
     }
