@@ -26,8 +26,8 @@ public class Vector {
         return Math.pow(a * a + b * b + c * c, 0.5);
     }
     
-     public Vector multiply(int g) {
-        return new Vector(a * g, b * g, c * g); //Умножение вектора на число
+     public Vector Multiply(int g) {
+        return new Vector(a * g, b * g, c * g); 
     }
 
     public double MultiplyScalar(Vector other) {
